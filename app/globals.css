@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair;
+  }
+}
+
+.text-clamp-h1 {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+}
+
+.text-clamp-h2 {
+  font-size: clamp(1.6rem, 3vw, 2.5rem);
+}
+
+.label-accent {
+  @apply font-inter uppercase tracking-[0.25em] text-[11px] text-amber font-semibold;
+}
+
+.body-text {
+  @apply font-inter text-[16px] leading-[1.7];
+}
+
+.btn-primary {
+  @apply bg-amber text-white rounded-full px-8 py-3 transition-colors hover:bg-amber-light animate-pulse-glow inline-flex items-center justify-center font-medium;
+}
+
+.btn-secondary {
+  @apply border border-cream/30 text-cream rounded-full px-8 py-3 transition-colors hover:bg-white/10 inline-flex items-center justify-center font-medium;
+}
+
+.btn-whatsapp {
+  @apply bg-[#25D366] text-white rounded-full px-8 py-3 transition-transform hover:scale-105 inline-flex items-center justify-center font-medium;
+}
