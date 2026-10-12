@@ -17,7 +17,7 @@ export default function Footer() {
 
           {/* Explore */}
           <div>
-            <h4 className="font-playfair text-lg mb-4 text-amber">Explore</h4>
+            <h3 className="font-playfair text-lg mb-4 text-amber">Explore</h3>
             <ul className="space-y-2">
               {navLinks.map((link) => (
                 <li key={link.name}>
@@ -31,7 +31,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="font-playfair text-lg mb-4 text-amber">Contact</h4>
+            <h3 className="font-playfair text-lg mb-4 text-amber">Contact</h3>
             <ul className="space-y-2 text-sage text-sm">
               <li>{siteConfig.contact.phone}</li>
               <li>{siteConfig.contact.email}</li>
@@ -40,7 +40,7 @@ export default function Footer() {
 
           {/* Social */}
           <div>
-            <h4 className="font-playfair text-lg mb-4 text-amber">Follow us</h4>
+            <h3 className="font-playfair text-lg mb-4 text-amber">Follow us</h3>
             <ul className="space-y-2 text-sage text-sm">
               <li>
                 <a href={siteConfig.social.facebook} className="hover:text-white transition-colors">Facebook</a>

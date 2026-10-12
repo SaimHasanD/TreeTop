@@ -2,9 +2,9 @@ export const siteConfig = {
   name: "TreeTop Sylhet",
   tagline: "Adventure. Nature. Family.",
   contact: {
-    phone: "01711 975 210",
-    email: "treetopbd@gmail.com",
-    whatsapp: "https://wa.me/8801711975210"
+    phone: "01XXX XXX XXX",
+    email: "demo@example.com",
+    whatsapp: "https://wa.me/880XXXXXXXXXX"
   },
   social: {
     facebook: "#",
@@ -28,18 +28,18 @@ export const homeContent = {
     h1: "Sylhet's Wildest",
     h1Italic: "Day Out",
     sub: "Zipline. Kayak. Archery. Horse Riding. 20 minutes from the airport.",
-    trustLine: "Open daily · Call 01711 975 210"
+    trustLine: "Open daily · Call 01XXX XXX XXX"
   },
   activities: {
     label: "THE ACTIVITIES",
     h2: "Pick your adventure",
     items: [
-      { id: "01", name: "Zipline", hook: "Fly over the treetops", image: "https://placehold.co/400x300/163d22/f4ede4?text=Zipline" },
-      { id: "02", name: "Kayaking", hook: "Paddle through the farm lake", image: "https://placehold.co/400x300/163d22/f4ede4?text=Kayaking" },
-      { id: "03", name: "Archery", hook: "Test your aim", image: "https://placehold.co/400x300/163d22/f4ede4?text=Archery" },
-      { id: "04", name: "Boating", hook: "Float through nature", image: "https://placehold.co/400x300/163d22/f4ede4?text=Boating" },
-      { id: "05", name: "Treetop Course", hook: "Climb, balance, conquer", image: "https://placehold.co/400x300/163d22/f4ede4?text=Treetop+Course" },
-      { id: "06", name: "Horse Riding", hook: "Gallop through the paddy fields", image: "https://placehold.co/400x300/163d22/f4ede4?text=Horse+Riding" }
+      { id: "01", name: "Zipline", hook: "Fly over the treetops", image: "https://placehold.co/400x300/163d22/f4ede4?text=Zipline", alt: "zipline adventure sylhet treetop farm" },
+      { id: "02", name: "Kayaking", hook: "Paddle through the farm lake", image: "https://placehold.co/400x300/163d22/f4ede4?text=Kayaking", alt: "kayaking farm lake sylhet adventure" },
+      { id: "03", name: "Archery", hook: "Test your aim", image: "https://placehold.co/400x300/163d22/f4ede4?text=Archery", alt: "archery activity sylhet treetop" },
+      { id: "04", name: "Boating", hook: "Float through nature", image: "https://placehold.co/400x300/163d22/f4ede4?text=Boating", alt: "boat ride sylhet farm lake" },
+      { id: "05", name: "Treetop Course", hook: "Climb, balance, conquer", image: "https://placehold.co/400x300/163d22/f4ede4?text=Treetop+Course", alt: "treetop obstacle course sylhet" },
+      { id: "06", name: "Horse Riding", hook: "Gallop through the paddy fields", image: "https://placehold.co/400x300/163d22/f4ede4?text=Horse+Riding", alt: "horse riding paddy fields sylhet" }
     ]
   },
   packages: {
@@ -47,7 +47,7 @@ export const homeContent = {
     h2: "Stay for an afternoon — or the night",
     items: [
       { name: "Half-Day", price: "700tk/person", description: "all activities + tea + snacks" },
-      { name: "Full-Day", price: "Call for price", description: "ring 01711 975 210" },
+      { name: "Full-Day", price: "Call for price", description: "ring 01XXX XXX XXX" },
       { name: "Overnight", price: "From 3,990tk", description: "activities + breakfast + pool", accent: true }
     ]
   },
@@ -94,7 +94,8 @@ export const activitiesContent = {
       duration: "15 min",
       age: "All ages",
       included: "Included in all packages",
-      image: "https://placehold.co/600x500/163d22/f4ede4?text=Zipline"
+      image: "https://placehold.co/600x500/163d22/f4ede4?text=Zipline",
+      alt: "zipline adventure sylhet treetop farm"
     },
     {
       id: "02",
@@ -104,7 +105,8 @@ export const activitiesContent = {
       duration: "30 min",
       age: "All ages",
       included: "All packages",
-      image: "https://placehold.co/600x500/163d22/f4ede4?text=Kayaking"
+      image: "https://placehold.co/600x500/163d22/f4ede4?text=Kayaking",
+      alt: "kayaking farm lake sylhet adventure"
     },
     {
       id: "03",
@@ -114,7 +116,8 @@ export const activitiesContent = {
       duration: "20 min",
       age: "Age 8+",
       included: "All packages",
-      image: "https://placehold.co/600x500/163d22/f4ede4?text=Archery"
+      image: "https://placehold.co/600x500/163d22/f4ede4?text=Archery",
+      alt: "archery activity sylhet treetop"
     },
     {
       id: "04",
@@ -124,7 +127,8 @@ export const activitiesContent = {
       duration: "30 min",
       age: "All ages",
       included: "All packages",
-      image: "https://placehold.co/600x500/163d22/f4ede4?text=Boating"
+      image: "https://placehold.co/600x500/163d22/f4ede4?text=Boating",
+      alt: "boat ride sylhet farm lake"
     },
     {
       id: "05",
@@ -134,7 +138,8 @@ export const activitiesContent = {
       duration: "45 min",
       age: "Age 5+",
       included: "All packages",
-      image: "https://placehold.co/600x500/163d22/f4ede4?text=Treetop+Course"
+      image: "https://placehold.co/600x500/163d22/f4ede4?text=Treetop+Course",
+      alt: "treetop obstacle course sylhet"
     },
     {
       id: "06",
@@ -144,7 +149,8 @@ export const activitiesContent = {
       duration: "30 min",
       age: "Age 6+",
       included: "All packages",
-      image: "https://placehold.co/600x500/163d22/f4ede4?text=Horse+Riding"
+      image: "https://placehold.co/600x500/163d22/f4ede4?text=Horse+Riding",
+      alt: "horse riding paddy fields sylhet"
     }
   ]
 };
@@ -170,7 +176,7 @@ export const packagesContent = {
       includes: "All 6 activities · Lunch · Tea · Snacks",
       doesNotInclude: "Room access",
       poolAddon: "200tk per person per hour",
-      minimum: "Call: 01711 975 210"
+      minimum: "Call: 01XXX XXX XXX"
     },
     {
       name: "OVERNIGHT",
@@ -197,7 +203,8 @@ export const accommodationContent = {
       features: ["Pond view", "Double bed", "En-suite", "AC", "Balcony"],
       includes: ["Activities", "Breakfast", "Pool"],
       layout: "1 Double Bed",
-      image: "https://placehold.co/600x400/163d22/f4ede4?text=Cottage"
+      image: "https://placehold.co/600x400/163d22/f4ede4?text=Cottage",
+      alt: "eco cottage overnight stay sylhet"
     },
     {
       name: "FAMILY ROOM",
@@ -206,7 +213,8 @@ export const accommodationContent = {
       features: ["Hill view", "En-suite", "AC"],
       includes: ["Activities", "Breakfast", "Pool"],
       layout: "1 double + 2 singles",
-      image: "https://placehold.co/600x400/163d22/f4ede4?text=Family+Room"
+      image: "https://placehold.co/600x400/163d22/f4ede4?text=Family+Room",
+      alt: "family room accommodation sylhet"
     },
     {
       name: "HILLVIEW EXECUTIVE",
@@ -215,7 +223,8 @@ export const accommodationContent = {
       features: ["Hill + pond view", "En-suite", "AC"],
       includes: ["Activities", "Breakfast", "Pool"],
       layout: "1 double + 3 singles",
-      image: "https://placehold.co/600x400/163d22/f4ede4?text=Hillview+Executive"
+      image: "https://placehold.co/600x400/163d22/f4ede4?text=Hillview+Executive",
+      alt: "hillview executive room accommodation sylhet"
     },
     {
       name: "EXECUTIVE FAMILY COTTAGE",
@@ -224,7 +233,8 @@ export const accommodationContent = {
       features: ["Private cottage", "2 bedrooms", "Living area", "Full kitchen", "AC", "Private balcony"],
       includes: ["Activities", "Breakfast", "Pool"],
       layout: "2 Bedrooms",
-      image: "https://placehold.co/600x400/163d22/f4ede4?text=Executive+Family+Cottage"
+      image: "https://placehold.co/600x400/163d22/f4ede4?text=Executive+Family+Cottage",
+      alt: "executive family cottage overnight stay sylhet"
     }
   ]
 };
@@ -241,7 +251,7 @@ export const howToBookContent = {
     { title: "Step 4: Show up and explore", text: "Arrive on your chosen date. Our team will be ready." }
   ],
   faq: [
-    { q: "Do I need to book in advance for half-day?", a: "Call us first to confirm we are open: 01711 975 210. Then arrive. No advance payment needed for half-day." },
+    { q: "Do I need to book in advance for half-day?", a: "Call us first to confirm we are open: 01XXX XXX XXX. Then arrive. No advance payment needed for half-day." },
     { q: "Can I cancel or reschedule?", a: "Deposits are non-refundable. If you need to reschedule, WhatsApp us at least 48 hours before your visit." },
     { q: "Is the pool included?", a: "The pool is included for overnight guests. Day visitors can add it for 200tk per person per hour." },
     { q: "Can I bring outside food?", a: "Outside food is not permitted. We provide tea, snacks, and standard set meals. Ask us about the current menu." },

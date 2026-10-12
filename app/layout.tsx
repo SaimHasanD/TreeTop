@@ -9,12 +9,25 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair" });
 
 export const metadata: Metadata = {
-  title: "TreeTop Sylhet",
-  description: "Adventure. Nature. Family.",
-  robots: {
-    index: false,
-    follow: false,
-  }
+  metadataBase: new URL("https://treetopsylhet.com"),
+  title: "TreeTop Sylhet | Adventure Farm 20 Min from Osmani Airport",
+  description: "Zipline, kayak, archery, horse riding and overnight cottages at Sylhet's wildest day out. Open daily. 20 minutes from Osmani Airport.",
+  alternates: {
+    canonical: "https://treetopsylhet.com",
+  },
+  openGraph: {
+    type: "website",
+    siteName: "TreeTop Sylhet",
+    locale: "en_BD",
+    title: "TreeTop Sylhet | Adventure Farm 20 Min from Osmani Airport",
+    description: "Zipline, kayak, archery, horse riding and overnight cottages at Sylhet's wildest day out. Open daily. 20 minutes from Osmani Airport.",
+    url: "https://treetopsylhet.com",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "TreeTop Sylhet | Adventure Farm 20 Min from Osmani Airport",
+    description: "Zipline, kayak, archery, horse riding and overnight cottages at Sylhet's wildest day out. Open daily. 20 minutes from Osmani Airport.",
+  },
 };
 
 export default function RootLayout({

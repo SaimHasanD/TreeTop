@@ -1,6 +1,28 @@
+import type { Metadata } from "next";
 import { activitiesContent, getWhatsAppLink } from "@/data/content";
 import LeafParticles from "@/components/LeafParticles";
 import ScrollReveal from "@/components/ScrollReveal";
+
+export const metadata: Metadata = {
+  title: "Activities | Zipline, Kayaking, Archery & More — TreeTop Sylhet",
+  description: "Six adventures in one place. Zipline over treetops, kayak the farm lake, ride horses through paddy fields. All ages. Book via WhatsApp.",
+  alternates: {
+    canonical: "https://treetopsylhet.com/activities",
+  },
+  openGraph: {
+    type: "website",
+    siteName: "TreeTop Sylhet",
+    locale: "en_BD",
+    title: "Activities | Zipline, Kayaking, Archery & More — TreeTop Sylhet",
+    description: "Six adventures in one place. Zipline over treetops, kayak the farm lake, ride horses through paddy fields. All ages. Book via WhatsApp.",
+    url: "https://treetopsylhet.com/activities",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Activities | Zipline, Kayaking, Archery & More — TreeTop Sylhet",
+    description: "Six adventures in one place. Zipline over treetops, kayak the farm lake, ride horses through paddy fields. All ages. Book via WhatsApp.",
+  },
+};
 
 export default function ActivitiesPage() {
   return (
@@ -35,7 +57,7 @@ export default function ActivitiesPage() {
                   </div>
                   <img 
                     src={activity.image} 
-                    alt={activity.name} 
+                    alt={activity.alt || activity.name} 
                     className="w-full h-[400px] md:h-[500px] object-cover rounded-2xl relative z-10 shadow-sm"
                   />
                 </div>

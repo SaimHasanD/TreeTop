@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import ForestHero from "@/components/ForestHero";
 import LeafParticles from "@/components/LeafParticles";
@@ -5,9 +6,73 @@ import ScrollReveal from "@/components/ScrollReveal";
 import FamilyCalculator from "@/components/FamilyCalculator";
 import { homeContent, getWhatsAppLink } from "@/data/content";
 
+export const metadata: Metadata = {
+  title: "TreeTop Sylhet | Adventure Farm 20 Min from Osmani Airport",
+  description: "Zipline, kayak, archery, horse riding and overnight cottages at Sylhet's wildest day out. Open daily. 20 minutes from Osmani Airport.",
+  alternates: {
+    canonical: "https://treetopsylhet.com",
+  },
+  openGraph: {
+    type: "website",
+    siteName: "TreeTop Sylhet",
+    locale: "en_BD",
+    title: "TreeTop Sylhet | Adventure Farm 20 Min from Osmani Airport",
+    description: "Zipline, kayak, archery, horse riding and overnight cottages at Sylhet's wildest day out. Open daily. 20 minutes from Osmani Airport.",
+    url: "https://treetopsylhet.com",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "TreeTop Sylhet | Adventure Farm 20 Min from Osmani Airport",
+    description: "Zipline, kayak, archery, horse riding and overnight cottages at Sylhet's wildest day out. Open daily. 20 minutes from Osmani Airport.",
+  },
+};
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "TreeTop Sylhet",
+  "description": "Adventure farm and eco-resort in Sylhet, Bangladesh",
+  "url": "https://treetopsylhet.com",
+  "telephone": "+880XXXXXXXXXX",
+  "email": "demo@example.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Lilapara, Dupagul",
+    "addressLocality": "Sylhet",
+    "addressCountry": "BD"
+  },
+  "openingHours": "Mo-Su 10:00-18:00",
+  "priceRange": "৳৳"
+};
+
+const touristAttractionSchema = {
+  "@context": "https://schema.org",
+  "@type": "TouristAttraction",
+  "name": "TreeTop Sylhet Adventure Farm",
+  "description": "Zipline, kayaking, archery, horse riding, boating and overnight cottages. 20 minutes from Osmani Airport.",
+  "url": "https://treetopsylhet.com",
+  "touristType": ["Family", "Adventure seekers", "Nature lovers"],
+  "availableLanguage": ["Bengali", "English"],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Lilapara, Dupagul",
+    "addressLocality": "Sylhet",
+    "addressCountry": "BD"
+  }
+};
+
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(touristAttractionSchema) }}
+      />
+      <div className="flex flex-col min-h-screen">
       
       {/* SECTION 1 — Hero */}
       <section className="relative h-screen flex flex-col justify-center items-center text-center overflow-hidden">
@@ -56,8 +121,11 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             {homeContent.activities.items.map((activity, i) => (
               <ScrollReveal key={activity.id} delay={i * 0.1}>
-                <div className="group relative bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-200 hover:scale-[1.02]">
-                  <img src={activity.image} alt={activity.name} className="w-full h-56 object-cover" />
+                <Link
+                  href="/activities"
+                  className="group relative bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-200 hover:scale-[1.02] block"
+                >
+                  <img src={activity.image} alt={activity.alt || activity.name} className="w-full h-56 object-cover" />
                   <div className="absolute top-4 left-4 bg-white/90 backdrop-blur text-forest-deep font-bold text-sm px-3 py-1 rounded-full">
                     {activity.id}
                   </div>
@@ -68,7 +136,7 @@ export default function Home() {
                       →
                     </div>
                   </div>
-                </div>
+                </Link>
               </ScrollReveal>
             ))}
           </div>
@@ -189,7 +257,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <ScrollReveal>
-              <img src="https://placehold.co/600x600/163d22/f4ede4?text=Our+Story" alt="Our Story" className="w-full h-[500px] object-cover rounded-2xl" />
+              <img src="https://placehold.co/600x600/163d22/f4ede4?text=Our+Story" alt="TreeTop Sylhet adventure farm family story" className="w-full h-[500px] object-cover rounded-2xl" />
             </ScrollReveal>
             <ScrollReveal delay={0.2}>
               <span className="label-accent mb-4 block">{homeContent.story.label}</span>
@@ -206,5 +274,6 @@ export default function Home() {
       </section>
 
     </div>
+    </>
   );
 }

@@ -1,6 +1,29 @@
+import type { Metadata } from "next";
+import Link from "next/link";
 import { howToBookContent, getWhatsAppLink } from "@/data/content";
 import LeafParticles from "@/components/LeafParticles";
 import ScrollReveal from "@/components/ScrollReveal";
+
+export const metadata: Metadata = {
+  title: "How to Book | TreeTop Sylhet Adventure Farm",
+  description: "Booking is simple. Pick your package, WhatsApp us, pay a 50% deposit via bKash. No forms. We reply within a few hours.",
+  alternates: {
+    canonical: "https://treetopsylhet.com/how-to-book",
+  },
+  openGraph: {
+    type: "website",
+    siteName: "TreeTop Sylhet",
+    locale: "en_BD",
+    title: "How to Book | TreeTop Sylhet Adventure Farm",
+    description: "Booking is simple. Pick your package, WhatsApp us, pay a 50% deposit via bKash. No forms. We reply within a few hours.",
+    url: "https://treetopsylhet.com/how-to-book",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "How to Book | TreeTop Sylhet Adventure Farm",
+    description: "Booking is simple. Pick your package, WhatsApp us, pay a 50% deposit via bKash. No forms. We reply within a few hours.",
+  },
+};
 
 export default function HowToBookPage() {
   return (
@@ -32,8 +55,19 @@ export default function HowToBookPage() {
                     {i + 1}
                   </div>
                   <div>
-                    <h3 className="font-playfair text-2xl font-bold mb-2">{step.title.split(": ")[1]}</h3>
-                    <p className="text-sage whitespace-pre-line">{step.text}</p>
+                    <h2 className="font-playfair text-2xl font-bold mb-2">{step.title.split(": ")[1]}</h2>
+                    <p className="text-sage whitespace-pre-line">
+                      {i === 0 ? (
+                        <>
+                          Pick your package and dates from the{" "}
+                          <Link href="/packages" className="text-amber underline hover:text-amber-light font-medium">
+                            packages page
+                          </Link>
+                        </>
+                      ) : (
+                        step.text
+                      )}
+                    </p>
                   </div>
                 </div>
               </ScrollReveal>

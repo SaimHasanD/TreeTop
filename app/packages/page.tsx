@@ -1,8 +1,30 @@
+import type { Metadata } from "next";
 import { packagesContent } from "@/data/content";
 import LeafParticles from "@/components/LeafParticles";
 import ScrollReveal from "@/components/ScrollReveal";
 import FamilyCalculator from "@/components/FamilyCalculator";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Packages & Pricing | Half-Day, Full-Day, Overnight — TreeTop Sylhet",
+  description: "Half-day from 700tk per person. Overnight cottages from 3,990tk. All packages include 6 activities. No confusing forms — just WhatsApp.",
+  alternates: {
+    canonical: "https://treetopsylhet.com/packages",
+  },
+  openGraph: {
+    type: "website",
+    siteName: "TreeTop Sylhet",
+    locale: "en_BD",
+    title: "Packages & Pricing | Half-Day, Full-Day, Overnight — TreeTop Sylhet",
+    description: "Half-day from 700tk per person. Overnight cottages from 3,990tk. All packages include 6 activities. No confusing forms — just WhatsApp.",
+    url: "https://treetopsylhet.com/packages",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Packages & Pricing | Half-Day, Full-Day, Overnight — TreeTop Sylhet",
+    description: "Half-day from 700tk per person. Overnight cottages from 3,990tk. All packages include 6 activities. No confusing forms — just WhatsApp.",
+  },
+};
 
 export default function PackagesPage() {
   return (
@@ -26,9 +48,9 @@ export default function PackagesPage() {
             {packagesContent.items.map((pkg, i) => (
               <ScrollReveal key={pkg.name} delay={i * 0.1}>
                 <div className={`bg-white rounded-2xl shadow-sm p-8 h-full flex flex-col ${pkg.name === 'OVERNIGHT' ? 'border-2 border-amber' : 'border border-gray-100'}`}>
-                  <h3 className="font-inter uppercase tracking-widest text-sm text-amber font-bold mb-4">
+                  <h2 className="font-inter uppercase tracking-widest text-sm text-amber font-bold mb-4">
                     {pkg.name}
-                  </h3>
+                  </h2>
                   <div className="font-playfair text-3xl text-forest-deep mb-2">{pkg.price}</div>
                   <div className="text-charcoal/60 text-sm mb-8 pb-8 border-b border-gray-100">
                     {pkg.timeSlots}

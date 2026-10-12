@@ -25,50 +25,57 @@ export default function Navbar() {
 
   return (
     <>
-      <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${
-          scrolled || isOpen ? "bg-forest-dark shadow-md" : "bg-transparent"
-        }`}
-      >
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <div className="flex items-center justify-between h-20">
-            {/* Logo */}
-            <Link href="/" className="flex flex-col items-center">
-              <span className="font-playfair text-2xl text-cream leading-none">TreeTop</span>
-              <span className="font-inter text-[10px] tracking-widest text-amber mt-1">SYLHET</span>
-            </Link>
+      <div className="fixed top-0 left-0 right-0 z-50">
+        <nav
+          className={`transition-colors duration-300 ${
+            scrolled || isOpen ? "bg-forest-dark shadow-md" : "bg-transparent"
+          }`}
+        >
+          <div className="max-w-6xl mx-auto px-4 sm:px-6">
+            <div className="flex items-center justify-between h-20">
+              {/* Logo */}
+              <Link href="/" className="flex flex-col items-center">
+                <span className="font-playfair text-2xl text-cream leading-none">TreeTop</span>
+                <span className="font-inter text-[10px] tracking-widest text-amber mt-1">SYLHET</span>
+              </Link>
 
-            {/* Desktop Links */}
-            <div className="hidden md:flex items-center space-x-8">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.name}
-                  href={link.href}
-                  className="text-cream/90 hover:text-amber transition-colors text-sm font-medium"
+              {/* Desktop Links */}
+              <div className="hidden md:flex items-center space-x-8">
+                {navLinks.map((link) => (
+                  <Link
+                    key={link.name}
+                    href={link.href}
+                    className="text-cream/90 hover:text-amber transition-colors text-sm font-medium"
+                  >
+                    {link.name}
+                  </Link>
+                ))}
+                <a
+                  href={getWhatsAppLink("Hi TreeTop! I have an inquiry about visiting.")}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="btn-whatsapp py-2 px-6 text-sm"
                 >
-                  {link.name}
-                </Link>
-              ))}
-              <a
-                href={getWhatsAppLink("Hi TreeTop! I have an inquiry about visiting.")}
-                target="_blank"
-                rel="noreferrer"
-                className="btn-whatsapp py-2 px-6 text-sm"
-              >
-                Book on WhatsApp
-              </a>
-            </div>
+                  Book on WhatsApp
+                </a>
+              </div>
 
-            {/* Mobile Menu Button */}
-            <button
-              className="md:hidden text-cream p-2"
-              onClick={() => setIsOpen(!isOpen)}
-            >
-              {isOpen ? <X size={28} /> : <Menu size={28} />}
-            </button>
+              {/* Mobile Menu Button */}
+              <button
+                className="md:hidden text-cream p-2"
+                onClick={() => setIsOpen(!isOpen)}
+              >
+                {isOpen ? <X size={28} /> : <Menu size={28} />}
+              </button>
+            </div>
           </div>
+        </nav>
+
+        {/* Demo Banner */}
+        <div className="w-full bg-amber text-charcoal text-center text-[12px] sm:text-[13px] py-[6px] px-4 font-medium leading-normal shadow-sm">
+          This is a demo website built for presentation purposes only. Not the official TreeTop Sylhet website.
         </div>
-      </nav>
+      </div>
 
       {/* Mobile Menu Overlay */}
       {isOpen && (

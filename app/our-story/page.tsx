@@ -1,6 +1,28 @@
+import type { Metadata } from "next";
 import { ourStoryContent, getWhatsAppLink } from "@/data/content";
 import LeafParticles from "@/components/LeafParticles";
 import ScrollReveal from "@/components/ScrollReveal";
+
+export const metadata: Metadata = {
+  title: "Our Story | Family Land, Family Run — TreeTop Sylhet",
+  description: "TreeTop Sylhet is built on family land brought back from the UK. Every activity, meal, and cottage is run by our family and the local Sylheti community.",
+  alternates: {
+    canonical: "https://treetopsylhet.com/our-story",
+  },
+  openGraph: {
+    type: "website",
+    siteName: "TreeTop Sylhet",
+    locale: "en_BD",
+    title: "Our Story | Family Land, Family Run — TreeTop Sylhet",
+    description: "TreeTop Sylhet is built on family land brought back from the UK. Every activity, meal, and cottage is run by our family and the local Sylheti community.",
+    url: "https://treetopsylhet.com/our-story",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Our Story | Family Land, Family Run — TreeTop Sylhet",
+    description: "TreeTop Sylhet is built on family land brought back from the UK. Every activity, meal, and cottage is run by our family and the local Sylheti community.",
+  },
+};
 
 export default function OurStoryPage() {
   return (
@@ -10,11 +32,9 @@ export default function OurStoryPage() {
         <LeafParticles />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 relative z-10 text-center mb-16">
           <ScrollReveal>
-            <h1 className="text-clamp-h1 mb-2 leading-tight">
-              {ourStoryContent.hero.h1}
-            </h1>
-            <h1 className="text-clamp-h1 text-amber italic leading-tight">
-              {ourStoryContent.hero.h1Italic}
+            <h1 className="text-clamp-h1 leading-tight">
+              <span className="block mb-2">{ourStoryContent.hero.h1}</span>
+              <span className="text-amber italic">{ourStoryContent.hero.h1Italic}</span>
             </h1>
           </ScrollReveal>
         </div>
@@ -31,7 +51,7 @@ export default function OurStoryPage() {
           <ScrollReveal>
             <img 
               src={ourStoryContent.image} 
-              alt="Family Story" 
+              alt="TreeTop Sylhet adventure farm family story" 
               className="w-full h-[400px] md:h-[600px] object-cover rounded-2xl shadow-lg border border-white/10"
             />
           </ScrollReveal>
@@ -54,7 +74,7 @@ export default function OurStoryPage() {
             {ourStoryContent.community.images.map((img, i) => (
               <ScrollReveal key={i} delay={i * 0.1}>
                 <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-sm bg-white">
-                  <img src={img} alt={`Community member ${i + 1}`} className="w-full h-full object-cover" />
+                  <img src={img} alt={`TreeTop Sylhet local community team member ${i + 1}`} className="w-full h-full object-cover" />
                 </div>
               </ScrollReveal>
             ))}

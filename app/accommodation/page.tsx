@@ -1,6 +1,28 @@
+import type { Metadata } from "next";
 import { accommodationContent, getWhatsAppLink } from "@/data/content";
 import LeafParticles from "@/components/LeafParticles";
 import ScrollReveal from "@/components/ScrollReveal";
+
+export const metadata: Metadata = {
+  title: "Accommodation | Cottages & Family Rooms — TreeTop Sylhet",
+  description: "Wake up in the treetops. Cottages and family rooms with pond view, breakfast, and full activity access. From 3,990tk per night.",
+  alternates: {
+    canonical: "https://treetopsylhet.com/accommodation",
+  },
+  openGraph: {
+    type: "website",
+    siteName: "TreeTop Sylhet",
+    locale: "en_BD",
+    title: "Accommodation | Cottages & Family Rooms — TreeTop Sylhet",
+    description: "Wake up in the treetops. Cottages and family rooms with pond view, breakfast, and full activity access. From 3,990tk per night.",
+    url: "https://treetopsylhet.com/accommodation",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Accommodation | Cottages & Family Rooms — TreeTop Sylhet",
+    description: "Wake up in the treetops. Cottages and family rooms with pond view, breakfast, and full activity access. From 3,990tk per night.",
+  },
+};
 
 export default function AccommodationPage() {
   return (
@@ -29,11 +51,11 @@ export default function AccommodationPage() {
             {accommodationContent.rooms.map((room, i) => (
               <ScrollReveal key={room.name} delay={i * 0.1}>
                 <div className="bg-white rounded-2xl overflow-hidden shadow-sm flex flex-col h-full border border-gray-100">
-                  <img src={room.image} alt={room.name} className="w-full h-64 object-cover" />
+                  <img src={room.image} alt={room.alt || room.name} className="w-full h-64 object-cover" />
                   <div className="p-8 flex flex-col flex-grow">
                     <div className="flex justify-between items-start mb-4">
                       <div>
-                        <h3 className="font-playfair text-2xl text-forest-deep font-bold mb-1">{room.name}</h3>
+                        <h2 className="font-playfair text-2xl text-forest-deep font-bold mb-1">{room.name}</h2>
                         <p className="text-charcoal/60 text-sm">{room.guests}</p>
                       </div>
                       <div className="text-right">
